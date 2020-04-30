@@ -1,0 +1,127 @@
+/* Main CSS */
+main {
+    width: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 30px;
+    padding-bottom: 60px;
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 46px;
+    color: #003D71;
+}
+
+#dropdown label{
+    font-size: 18px;
+}
+
+select{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+#data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+small {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+#left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 100px;
+}
+
+h2{
+    color: #2190CF;
+}
+
+#chart {
+    display: block;
+    margin: 5px 0 0 30px;
+    padding: 0 5px;
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
+}
+
+.chart-title {
+    fill: #003D71;
+}
+
+#bar-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.axis-label {
+    color: #003D71;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#sunburst-group {
+    display: flex;
+    flex-direction: row;
+}
+
+#sunburst-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.nameLabel {
+    /*font-size: 11px;*/
+    font-weight: 600;
+}
+
+#back {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #003D71;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+}
+
+#back:hover {
+    cursor: pointer;
+    color: #2190CF;
+}
+
+#arrow {
+    margin-right: 2px;
+}
+
+.bars {
+    display: none;
+}
+
+.bars-show {
+    display: block;
+}
+
+.numTotal {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.legend {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hovered {
+    fill-opacity: 1;
+}

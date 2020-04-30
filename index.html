@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <title>Final Project</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <h1>2018 U.S. Hate Crimes</h1>
+        <div id='content'>
+            <section id="top">
+                <div id="data">
+                    <div id="left-side">
+                        <div id="dropdown">
+                            <label>State:</label>
+                            <select id="state">
+                                <option>Alabama*</option>
+                                <option>Alaska*</option>
+                                <option>Arizona</option>
+                                <option>Arkansas**</option>
+                                <option>California</option>
+                                <option>Colorado*</option>
+                                <option>Connecticut</option>
+                                <option>Delaware*</option>
+                                <option>Florida</option>
+                                <option>Georgia**</option>
+                                <option>Hawaii</option>
+                                <option>Idaho</option>
+                                <option>Illinois</option>
+                                <option>Indiana</option>
+                                <option>Iowa</option>
+                                <option>Kansas*</option>
+                                <option>Kentucky</option>
+                                <option>Louisiana</option>
+                                <option>Maine</option>
+                                <option>Maryland</option>
+                                <option>Massachusetts</option>
+                                <option>Michigan</option>
+                                <option>Minnesota</option>
+                                <option>Mississippi*</option>
+                                <option>Missouri*</option>
+                                <option>Montana*</option>
+                                <option>Nebraska</option>
+                                <option>Nevada</option>
+                                <option>New Hampshire*</option>
+                                <option>New Jersey</option>
+                                <option>New Mexico</option>
+                                <option>New York</option>
+                                <option>North Carolina*</option>
+                                <option>North Dakota*</option>
+                                <option>Ohio*</option>
+                                <option>Oklahoma</option>
+                                <option>Oregon</option>
+                                <option>Pennsylvania</option>
+                                <option>Rhode Island</option>
+                                <option>South Carolina**</option>
+                                <option>South Dakota*</option>
+                                <option>Tennessee*</option>
+                                <option>Texas</option>
+                                <option>Utah</option>
+                                <option>Vermont*</option>
+                                <option>Virginia</option>
+                                <option>Washington</option>
+                                <option>Washington D.C.</option>
+                                <option>West Virginia*</option>
+                                <option>Wisconsin*</option>
+                            </select>
+                            <p><small><b>NOTE:</b> Wyoming not included in the original data collected by the FBI. <br>
+                                    *State HAS hate crime laws but is NOT required to collect data. Data may not be
+                                    accurate.<br>
+                                    **State does NOT have hate crime laws and is NOT required to collect data. Data may
+                                    not
+                                    be
+                                    accurate.<br>
+                                    More info can be found <a
+                                        href="https://www.justice.gov/hatecrimes/laws-and-policies">here.</a></small>
+                            </p>
+                        </div>
+                        <h2>Introduction</h2>
+                        <p id="into">The United States is commonly referred to as a "melting pot" because it is rich
+                            with cultures from around the world.
+                            The ideal would be for everyone to coexist peacefully, but unfortunately many people are
+                            scared of difference.
+                            There are people in America who are fueled with hate, especially towards those that appear
+                            different from them, and choose to act on that hate in violent ways. The data presented here
+                            comes directly from the Federal Bureau of Investigation's official database and looks at
+                            reported hate crimes throughout the U.S. Due to the large amount of data, I chose to
+                            specifically use the most recent collection which comes from 2018.
+                            <br><br><b>**DISCLAIMER**</b><br><br>
+                            This data comes solely from the information provided and is not a reflection of my own
+                            beliefs and values. Although many people see hate crimes as only being crimes against
+                            minority groups, the FBI does not view them as being exclusive to minorities. They define a
+                            hate crime as a "criminal offense against a person or
+                            property motivated in whole or in part by an offender’s bias against a race, religion,
+                            disability, sexual orientation, ethnicity, gender, or gender identity."<sub><a
+                                    href="https://www.fbi.gov/investigate/civil-rights/hate-crimes#Definition">cite</a></sub>
+                        </p>
+
+                    </div>
+                    <div id="sunburst-group">
+                        <div id="pair">
+                            <button id="back"><span id="arrow">&#8592;</span>Back</button>
+                            <svg id='chart'></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="story">
+                <h2>What is Being Investigated?</h2>
+                <p>There are five main categories of hate crimes that this data looks at in each state: <b>Race,
+                        Religion, Disability,
+                        Gender Identity, and Sexual Orientation.</b> Each category can be broken down into sub-groups to
+                    further look at which specific group was targeted in a hate-motivated crime. For example, within the
+                    "Disability" category, it gets broken down into whether the crime was committed against someone for
+                    a physical disability or a mental one.</p>
+
+                <h2>How to View the Data</h2>
+                <p>Use the dropdown to select the state you would like to look at. The bar graph lists the total number
+                    of hate crimes reported each month in 2018. Clicking on a bar will allow you to look at a breakdown
+                    of what kind of hate crimes occurred in that month. The sunburst will show you the main category,
+                    the sub-group, where it was committed, and the date it was committed.</p>
+
+                <h2>Findings</h2>
+                <p>Generally speaking, the type of hate crime that seems to be the most prevalent among all 50 (actually
+                    49 because Wyoming isn't listed) is race-related, specifically against Black/African-American
+                    people. Race-related hate crimes are frequently seen as making up <b>at least 50%</b> of the hate
+                    crimes reported. In many instances across the states listed, Anti-Black hate crimes contribute to
+                    <i>all</i>, or nearly all, race-related hate crimes in a given month.</i></b> The second largest
+                    reported hate crime is unsurprisingly sexual orientation-related crimes. Within this category, the
+                    majority of crimes are against gay males. The other types within that category are against gay
+                    women, bisexual people, and any other queer orientation. The third category that stands out as being
+                    reported often is religion. Religious hate crimes are mostly against Jewish people and Muslims*.
+                    <br><br><small>*I acknowledge the fact that some argue that being Muslim or Jewish is more than just
+                        a
+                        religion. For simplicity's sake of the data visualization, I have chosen to group them under
+                        "Religion."</small></p>
+
+                <h2>Caveats</h2>
+                <p>It is very difficult to compare each state to one another because this data does not take into
+                    account differences in population size. For example, it makes sense that California has drastically
+                    more cases than Delaware or Rhode Island, solely for the fact that it is vastly more densely
+                    populated. Another important point to note is that these are just reports. There is no information
+                    detailing whether or not these cases were proven to be true or false. In the data itself, it lists
+                    offense descriptions, and some list car theft as a hate crime, which seems highly improbable.
+                    Lastly, as noted under the dropdown menu, many states are not required to collect any data relating
+                    to hate crimes--some don't even have hate crime laws. This means that there are most likely more
+                    hate crimes in these states that just go unnoticed (not to mention, Wyoming is absent from the data
+                    completely). Based on the findings of what is provided, it can be safe to assume that the data
+                    unreported would align with the patterns seen here.</p>
+
+                <h2>Conclusion</h2>
+                <p>From this data, it is evident that the United States needs to do more work to protect people from
+                    bias-fueled hate crimes. Black people, gay people, and Jewish and Islamic people are still subjected
+                    to prejudice and hate in 2018 (and even today in 2020). This hate has roots deep in U.S. history,
+                    dating even before slavery. It needs to end, but it can't without action from everyone.
+                    There are a surprising number of states that do not have hate crime laws and/or do not have to
+                    report hate crimes, which means the American people and the government are not being accurately
+                    informed of the prevalence of this issue. We, as a country, need to make changes to bring these
+                    numbers down. </p>
+            </section>
+        </div>
+    </main>
+    <!-- add your HTML here -->
+    <script src='./main.js'></script>
+</body>
+
+</html>
